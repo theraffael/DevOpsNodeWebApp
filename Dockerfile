@@ -3,12 +3,17 @@ FROM node:22.11.0
 # Create app directory
 WORKDIR /usr/src/app
 
-# Copy app
-COPY . .
+# Copy package files first to utilize Docker cache effectively
+COPY package*.json ./
 
-# Install
+# Install all dependencies from package.json
 RUN npm install
 
-# Docker Run Command
-EXPOSE 3000
-CMD [ "node", "server.js" ]
+# Copy the rest of the app files
+COPY . .
+
+# Expose the port your app runs on
+EXPOSE 3001:3000
+
+# Run your application
+CMD ["node", "server.js"]
