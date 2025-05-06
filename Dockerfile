@@ -1,4 +1,6 @@
-FROM node:22.11.0
+# docker build -t mosazhaw/node-web-app .
+
+FROM node:22.15.0
 
 # Create app directory
 WORKDIR /usr/src/app
