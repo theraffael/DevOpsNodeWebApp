@@ -13,7 +13,7 @@ const HOST = process.env.HOST || 'localhost';
 // App setup
 const app = express();
 app.get('/', (req, res) => {
-  res.send('Hello FS2025 DevOps Course! Es ist Dienstagnachmittag :-)');
+  res.send('Hello FS2025 DevOps Course! Es ist Dienstagnachmittag :-) Cloud Deploy auf Render.com');
 });
 
 app.listen(PORT, HOST);
