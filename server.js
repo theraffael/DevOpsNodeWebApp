@@ -8,7 +8,7 @@ require('dotenv').config();
 
 // Environment variables
 const PORT = process.env.PORT || 3001;
-const HOST = process.env.HOST || 'localhost';
+const HOST = process.env.HOST || '0.0.0.0';
 
 // App setup
 const app = express();
